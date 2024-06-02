@@ -1,0 +1,26 @@
+{
+  "name": "amaysim-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open:prod": "npx cypress open --e2e -b chrome",
+    "cy:open:qa": "npx cypress open --e2e --env configFile=qa -b chrome",
+    "cy:open:si": "npx cypress open --e2e --env configFile=si -b chrome",
+    "cy:run:tests:prod": "npx cypress run --spec cypress/e2e/tests/*.cy.ts -b chrome",
+    "cy:run:tests:qa": "npx cypress run --spec cypress/e2e/tests/*.cy.ts --env configFile=qa -b chrome",
+    "cy:run:tests:si": "npx cypress run --spec cypress/e2e/tests/*.cy.ts --env configFile=qa -b chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.10.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress", "node"],
+
+    "paths": {
+      "@fixture/*": ["cypress/fixtures/*"],
+      "@functions/*": ["cypress/e2e/functions/*"],
+      "@typings/*": ["cypress/support/typings/*"]
+    },
+
+    // Importing JSON enabler
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["**/*.ts"]
+}
